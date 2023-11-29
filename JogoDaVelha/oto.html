@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOGOSPRO - Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="https://fontmeme.com/pt/fontes-pixeladas/"><img src="https://fontmeme.com/permalink/231102/3cca964001ff54748377f088889a2e83.png" alt="fontes-pixeladas" border="0"></a></a></h1>
+    </header>
+    <section>
+        <div class="flex-container">
+          <!--ADIVINHAÇÃO-->
+            <div>
+                <h1>🩻 ADIVINHE O NÚMERO 🩻</h1>
+                    <p>
+                       <input type="text" class="num" placeholder="Digite aqui" id="guess"> <button onclick="checkGuess()" class="num">Enviar</button>
+                       <br>
+                       <p id="message"></p>
+                       <button onclick="resetGame()" class="num">Reiniciar Jogo</button>
+                    </p>
+              </div>
+           <!--JOGO DA VELHA-->
+            <div>
+                <h1>🩻 JOGO DA VELHA 🩻</h1>
+                <div class="board" id="board">
+                    <div class="cell" onclick="makeMove(0)"></div>
+                    <div class="cell" onclick="makeMove(1)"></div>
+                    <div class="cell" onclick="makeMove(2)"></div>
+                    <div class="cell" onclick="makeMove(3)"></div>
+                    <div class="cell" onclick="makeMove(4)"></div>
+                    <div class="cell" onclick="makeMove(5)"></div>
+                    <div class="cell" onclick="makeMove(6)"></div>
+                    <div class="cell" onclick="makeMove(7)"></div>
+                    <div class="cell" onclick="makeMove(8)"></div>
+                </div>
+                <p id="winner"></p>
+                <button onclick="restGame()" class="num">Reiniciar Jogo</button>
+            </div>
+      <!--OQUE É-->
+          <div>
+               <p class="game-board">
+                 <h1>🩻 OQUE É OQUE É? 🩻</h1> 
+                   <img src="https://media4.giphy.com/media/4Z95uhPpDHmOsjifx8/giphy.gif?cid=6c09b952yqca6w0rk9ht1bxho82y2u613iedvdktk8glosm4&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" width=30%; class="espan">
+                   <p id="enigma">À noite é um evento, com fantasias de arrepiar, onde as crianças pedem doces ou travessuras. O que é?</p>
+                   <div>
+                    <div>
+                        <button id="reiniciar" style="display: none;" class="num">Reiniciar</button>
+                        <input type="text" id="resposta" class="num" placeholder="Clique em iniciar"> <button id="iniciar" class="num">Iniciar</button>
+                        <button id="verificar" style="display: none;" class="num">Verificar</button>
+                        <p id="mensagem"></p>
+                    </div>
+                </div>
+            
+               </p>
+          </div>
+        </div>    
+    </section>
+    <footer>
+        <!-- Rodapé -->
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

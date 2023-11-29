@@ -1,0 +1,94 @@
+body{
+    background-image: url(https://i.pinimg.com/originals/7f/a4/88/7fa4882ba8f64ab6cd20ebbb1f8dbb8c.jpg);
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .flex-container > div {
+    background-color: black;
+    opacity: 0.5;
+    border: black solid 3px;
+    border-radius: 20px;
+    width: 500px;
+    margin: 10px;
+    max-width: 85%;
+    padding: 10px;
+    text-align: center;
+
+  }
+  .flex-container > div {
+    transition: border-color 0.3s;
+  }
+.flex-container > div:hover {
+    opacity: 0.8;
+    border: 5px solid transparent;
+    background: linear-gradient(black, black) padding-box,linear-gradient(to right, #9f90ea, #675cb0, #2f2c79, #171a4a, #000020) border-box;
+    animation: border-glow 1s infinite alternate;
+    box-shadow: 0 0 10px 5px #675cb0;
+  }
+  @keyframes border-glow {
+    0% {
+        border-color: transparent;
+    }
+    100% {
+        border-color:#171a4a;
+    }
+  }
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }}
+    .num{
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #0d192b;
+      color: white;
+      margin-bottom: 10px;
+    }
+    ::placeholder{
+      color: gray;
+    }
+
+    /*Jogo da velha */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .cell {
+    width: 100px;
+    height: 43px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 2em;
+    text-align: center;
+    cursor: pointer;
+  }
+  .cell:hover {
+    background-color: white;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  /*Enigma */
+  #enigma {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  #mensagem {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  } 
