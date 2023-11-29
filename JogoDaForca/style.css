@@ -1,0 +1,233 @@
+/*Página inicial*/
+body{
+    background-color: #e87624;
+    background-image: url(https://i.pinimg.com/originals/f6/fe/01/f6fe01bc451088065d21ddb805ed1a9e.gif);
+    background-size: 150%;
+    font-family: fantasy;
+    color: #420001;
+    font-size: 45px;
+  }
+  h1{
+    text-align: center;
+  }
+  
+  .but{
+    position: absolute;
+    top: 30%;
+    left: 38%;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #330708;
+    border: none;
+    color: #611608;
+    text-align: center;
+    font-size: 28px;
+    padding: 30px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-family: Consolas, monaco, monospace;
+    background-image: unset;
+  }
+  
+  .button span {
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  /*transisão*/
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5c65a119797f745edc00857f/1580157466277-UL8FEYCX42B702UIRTZL/Desert.gif);
+    background-size: 100%;
+    color: #5c0e0f;
+    font-family: fantasy;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  /*X*/
+  .overlay-content {
+    position: relative;
+    top: 0%;
+    width: 70%;
+    text-align: center;
+    margin-top: 0px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+  }  
+  /*Elementos da forca*/
+.flex-container-1 {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container-2-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.flex-container-3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/1445/1445607.png);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgb(214, 40, 40);
+    cursor: pointer;
+    border: 5px solid transparent;
+    animation: border-glow 1s infinite alternate;
+}
+
+@keyframes border-glow {
+    0% {
+        border-color: transparent;
+    }
+    100% {
+        border-color:#bc282a;
+    }
+  }
+
+
+h2{
+    font-size: 10px;
+    margin-left: 230%;
+}
+
+p {
+    font-size: 20px;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #38080a;
+    width: 45px;
+    margin: 15px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    width: 35px;
+    padding: 10px 0;
+    background-image: url(https://cdn-icons-png.flaticon.com/512/1445/1445607.png);
+    background-size: 100%;
+    color: rgb(86, 19, 19);
+    border: solid rgb(71, 18, 18) ;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button.novo-bt {
+    width: auto;
+    padding: 10px;
+}
+
+.certa, .certa:hover {
+    background: #0eac06;
+    border: 1px solid #0682ac;
+    cursor: inherit;
+}
+
+.errada, .errada:hover {
+    background: #DC1F27;
+    border: 1px solid #DC1F27;
+    cursor: inherit;
+}
+#tentativas-restantes{
+    float: right;
+    padding: 20px 10px 0 0;
+}
+#novo{
+    float: right;
+    flex-direction: row;
+    background-color: #d1492e;
+    border-radius: 5px;
+    background-image: unset;
+    mask-repeat: no-repeat;
+}
+#direita {
+  position: fixed;
+  top: 200px;
+  right: 0;
+  padding: 10px;
+}
+#esquerda {
+  position: fixed;
+  top: 200px;
+  left: 0;
+  padding: 10px;
+}
